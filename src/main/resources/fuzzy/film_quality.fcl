@@ -1,0 +1,123 @@
+FUNCTION_BLOCK film_quality_assessment
+
+// Input variables
+VAR_INPUT
+    direction : REAL;
+    acting : REAL;
+    screenplay : REAL;
+    visualEffects : REAL;
+    culturalSignificance : REAL;
+END_VAR
+
+// Output variable
+VAR_OUTPUT
+    quality : REAL;
+END_VAR
+
+// Fuzzify input variable 'direction'
+FUZZIFY direction
+    TERM poor := (0, 1) (3, 1) (5, 0);
+    TERM average := (3, 0) (5, 1) (7, 0);
+    TERM good := (5, 0) (7, 1) (9, 0);
+    TERM excellent := (7, 0) (9, 1) (10, 1);
+END_FUZZIFY
+
+// Fuzzify input variable 'acting'
+FUZZIFY acting
+    TERM poor := (0, 1) (3, 1) (5, 0);
+    TERM average := (3, 0) (5, 1) (7, 0);
+    TERM good := (5, 0) (7, 1) (9, 0);
+    TERM excellent := (7, 0) (9, 1) (10, 1);
+END_FUZZIFY
+
+// Fuzzify input variable 'screenplay'
+FUZZIFY screenplay
+    TERM poor := (0, 1) (3, 1) (5, 0);
+    TERM average := (3, 0) (5, 1) (7, 0);
+    TERM good := (5, 0) (7, 1) (9, 0);
+    TERM excellent := (7, 0) (9, 1) (10, 1);
+END_FUZZIFY
+
+// Fuzzify input variable 'visualEffects'
+FUZZIFY visualEffects
+    TERM poor := (0, 1) (3, 1) (5, 0);
+    TERM average := (3, 0) (5, 1) (7, 0);
+    TERM good := (5, 0) (7, 1) (9, 0);
+    TERM excellent := (7, 0) (9, 1) (10, 1);
+END_FUZZIFY
+
+// Fuzzify input variable 'culturalSignificance'
+FUZZIFY culturalSignificance
+    TERM low := (0, 1) (3, 1) (5, 0);
+    TERM moderate := (3, 0) (5, 1) (7, 0);
+    TERM high := (5, 0) (7, 1) (9, 0);
+    TERM veryHigh := (7, 0) (9, 1) (10, 1);
+END_FUZZIFY
+
+// Defuzzify output variable 'quality'
+DEFUZZIFY quality
+    TERM bad := (0, 1) (2, 1) (4, 0);
+    TERM mediocre := (2, 0) (4, 1) (6, 0);
+    TERM good := (4, 0) (6, 1) (8, 0);
+    TERM excellent := (6, 0) (8, 1) (10, 1);
+    METHOD : COG; // Center of Gravity defuzzification
+    DEFAULT := 5;
+END_DEFUZZIFY
+
+// Fuzzy rules (minimum 10 as required)
+RULEBLOCK rules
+    AND : MIN;
+    ACT : MIN;
+    ACCU : MAX;
+
+    // Rule 1: Excellent direction and acting -> Excellent quality
+    RULE 1 : IF direction IS excellent AND acting IS excellent 
+             THEN quality IS excellent;
+    
+    // Rule 2: Poor direction or poor acting -> Bad quality
+    RULE 2 : IF direction IS poor OR acting IS poor 
+             THEN quality IS bad;
+    
+    // Rule 3: Good direction, good acting, excellent screenplay -> Excellent
+    RULE 3 : IF direction IS good AND acting IS good AND screenplay IS excellent 
+             THEN quality IS excellent;
+    
+    // Rule 4: Average across the board -> Good quality
+    RULE 4 : IF direction IS average AND acting IS average AND screenplay IS average 
+             THEN quality IS mediocre;
+    
+    // Rule 5: High cultural significance compensates -> Good quality
+    RULE 5 : IF culturalSignificance IS veryHigh 
+             THEN quality IS good;
+    
+    // Rule 6: Excellent visual effects with good direction -> Excellent
+    RULE 6 : IF visualEffects IS excellent AND direction IS good 
+             THEN quality IS excellent;
+    
+    // Rule 7: Poor screenplay -> Mediocre quality
+    RULE 7 : IF screenplay IS poor 
+             THEN quality IS mediocre;
+    
+    // Rule 8: All excellent -> Excellent quality
+    RULE 8 : IF direction IS excellent AND acting IS excellent AND screenplay IS excellent 
+             THEN quality IS excellent;
+    
+    // Rule 9: Good direction and acting -> Good quality
+    RULE 9 : IF direction IS good AND acting IS good 
+             THEN quality IS good;
+    
+    // Rule 10: Mixed average and good -> Good quality
+    RULE 10 : IF direction IS good AND acting IS average AND screenplay IS good 
+              THEN quality IS good;
+    
+    // Rule 11: Poor visual effects doesn't ruin if others are good
+    RULE 11 : IF direction IS excellent AND acting IS excellent AND visualEffects IS poor 
+              THEN quality IS good;
+    
+    // Rule 12: High cultural significance with average quality -> Good
+    RULE 12 : IF culturalSignificance IS high AND direction IS average 
+              THEN quality IS good;
+
+END_RULEBLOCK
+
+END_FUNCTION_BLOCK

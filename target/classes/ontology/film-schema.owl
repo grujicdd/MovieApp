@@ -1,0 +1,618 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app/"
+     xml:base="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#basedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#basedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Organization"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#basedOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#basedOn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#belongsToEra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#belongsToEra">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Era"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#bornIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#bornIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#cinematographyBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#cinematographyBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Cinematographer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#directedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#directedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Director"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#distributedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#distributedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#DistributionCompany"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#foundedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#foundedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Organization"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#hasActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#hasActor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#hasGenre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#hasGenre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Genre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#hasNationality -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#hasNationality">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#hasPrequel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#hasPrequel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#hasSequel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#hasSequel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#nominatedFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#nominatedFor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Award"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#owns -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#owns">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Organization"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#producedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#producedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Producer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#producedByCompany -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#producedByCompany">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#ProductionCompany"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#receivedAwards -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#receivedAwards">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Award"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#remakeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#remakeOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#setIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#setIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#spokenIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#spokenIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Language"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#wonAward -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#wonAward">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Award"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#workedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#workedWith">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#writtenBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#writtenBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Writer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#actingScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#actingScore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#awardName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#awardName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Award"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#awardYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#awardYear">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Award"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#biography -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#biography">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#birthDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#birthDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#boxOffice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#boxOffice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#budget -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#budget">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#countryName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#countryName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Country"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#culturalSignificanceScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#culturalSignificanceScore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#directionScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#directionScore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#duration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#duration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#eraEndYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#eraEndYear">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Era"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#eraName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#eraName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Era"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#eraStartYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#eraStartYear">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Era"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#foundedYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#foundedYear">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#genreName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#genreName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Genre"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#hasName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#hasOriginalTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#hasOriginalTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#hasTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#hasTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#imdbRating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#imdbRating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#imdbVotes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#imdbVotes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#languageName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#languageName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Language"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#organizationName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#organizationName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#releaseYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#releaseYear">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#screenplayScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#screenplayScore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#synopsis -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#synopsis">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#visualEffectsScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#visualEffectsScore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Actor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Award -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Award"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Cinematographer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Cinematographer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Country"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Director -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Director">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#DistributionCompany -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#DistributionCompany">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Era -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Era"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Film"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Genre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Language -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Language"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Organization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Organization"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Producer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Producer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#ProductionCompany -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#ProductionCompany">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Studio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Studio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Writer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Writer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dusan/ontologies/2025/11/movie-app#Person"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
